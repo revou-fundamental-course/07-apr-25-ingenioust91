@@ -1,12 +1,26 @@
+body {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 h2 {
-  font-family: futura;
+  font-family: nunito,sans-serif;
   font-size: 30px;
+}
+
+h3,p {
+  font-family: nunito,sans-serif;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-header {
   display: flex;
   justify-content: space-between;
-  font-family: futura;
+  font-family: nunito,sans-serif;
   font-size: 20px;
 }
 
@@ -30,7 +44,6 @@ nav > a {
     height: 70px;
     background-image: url(https://i.ibb.co.com/PZ7jXhcY/logo.png);
     background-size: cover;
-    background-position: center;
     ;
   }
 
@@ -40,3 +53,51 @@ nav > a {
     background-size: cover;
     background-position: center;
   }
+
+.section-profile{
+    background-color: lightgray;
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+.profile-opening{
+    padding-right: 30px;
+    padding-left: 10px;   
+}
+
+.contact{
+    display: flex;
+    background-color: #dedede;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.any-idea{
+  font-family: nunito,sans-serif;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: black;
+  color: white; 
+}
+
+.form-contact{
+  padding-left: 30px;
+  width: 100%;
+}
+
+#cust-name, #cust-email, #cust-project{
+  background: none;
+  border: 0px;
+  display: inline-flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-header{flex-direction: column;}
+  nav{width: 100%; flex-direction: column;}
+  .logo{margin-bottom: 14px; align-self: center;}
+}
