@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css\style.css">
     </head>
 
-    <body>
+    <body onpageshow="showSlides(1)">
         <header class="main-header">
             <div class="logo"></div>
 
@@ -15,7 +15,7 @@
                 <a href="#home-section">Home</a>
                 <a href="#profile-section">Profile</a>
                 <a href="#portfolio-section">Portfolio</a>
-                <a href="#contact-section">Contact Me</a>
+                <a href="#contact-section">Contact</a>
             </nav>
         </header>
 
@@ -31,7 +31,8 @@
        		<script src="js\script.js"></script>
 
                 <!--banner-->
-                <div class="main-banner"></div>
+		<div class="main-banner"></div>
+
 		<h3 style="text-align: center;letter-spacing: .3rem;">BRANDING  |  GRAPHIC DESIGN  |  DIGITAL</h3>
 
             <section id="profile-section"></section>
@@ -43,18 +44,33 @@
 			<h3 style="font-size: 30px; width: 150px;">We Build DESIGN</h3>
 			<h3 style="border: 2px solid; width: 33px"></h3>
 			</div>
-                        <p style="align-content: center;letter-spacing: .05rem;">I'm Inge Salim, a graphic designer based in Bandung - Indonesia. I've been designing profesionally since 2013 and am passionate about any graphic design related. I work with clients all around the country and all around the world. Just contact me for work inquiries!</p>
+                        <p>I'm Inge Salim, a graphic designer based in Bandung - Indonesia. I've been designing profesionally since 2013 and am passionate about any graphic design related. I work with clients all around the country and all around the world. Just contact me for work inquiries!</p>
                     </article>
                 </header>
 
             <section id="portfolio-section"></section>
                 <header>
                    <h2>My Portfolio</h2>
-		   <table class="center">
-		     <th><img src="https://www.byingesalim.com/static/5fb43ecd0cbb8b0cd5a2b16062c82916/554db/chischis-1.jpg" alt="chischis" style="width: 300px"></th>
-		     <th><img src="https://www.byingesalim.com/static/f28c92263356cd58edfad69cd1a746b9/554db/gula-nenek-4.jpg" alt="gulanenenk" style="width: 300px"></th>
-		     <th><img src="https://www.byingesalim.com/static/a089a256a2ad33344c2eb88e62e82a28/554db/business-card-mockup-11a.jpg" alt="tortens" style="width: 300px"></th>
-		   </table>
+		   <div class="porto-container">
+		   <div class="img-slideshow fade">
+		    <img src="https://www.byingesalim.com/static/5fb43ecd0cbb8b0cd5a2b16062c82916/554db/chischis-1.jpg" alt="chischis"style="width:300px">
+		    <p><b>Chis Chis - Social Media Project</b></p>
+		   </div>
+
+		   <div class="img-slideshow fade">
+		    <img src="https://www.byingesalim.com/static/f28c92263356cd58edfad69cd1a746b9/554db/gula-nenek-4.jpg" alt="gulanenenk" style="width:300px">
+		    <p><b>Gula Nenek - Branding Project</b></p>
+		   </div>
+
+		   <div class="img-slideshow fade">
+		    <img src="https://www.byingesalim.com/static/a089a256a2ad33344c2eb88e62e82a28/554db/business-card-mockup-11a.jpg" alt="tortens" style="width:300px";>
+		    <p><b>Tortens - Menu Project</b></p>
+		   </div>
+
+
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+		   </div>
                  </header>
 
             <hr>
@@ -80,7 +96,13 @@
 
 		     <p>or if you want to collaborate with me, you can send email!</p>
 
-		     <button id="send-message">Send Message</button>
+		     <button type="button" id="submit-form" onclick="validationform()">Send Message</button>
+                     </div>
+
+                     <div class="result-form">
+                      <textarea rows="12" cols="60">
+                        <p>RESULT!!</p>
+                      </textarea>
                      </div>
 
                     </article>
