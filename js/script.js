@@ -20,19 +20,21 @@ function showSlides(n){
  imglist[slideIndex-1].style.display = "block";
 }
 
-function validationform () {
-  const cname = document.getElementById('cust-name').value;
-  const cemail = document.getElementById('cust-email').value;
-  const cproject = document.getElementById('cust-project').value;
+function validationform() {
+  var cname = document.getElementById('cust-name').value;
+  var cemail = document.getElementById('cust-email').value;
+  var cproject = document.getElementById('cust-project').value;
 
   if (cname == '') {alert('Please enter your name')}
   else if (cemail == '') {alert('Please enter your email')}
   else if (cproject == '') {alert('Please tell me your project')}
-  else {alert('Thank You - Please wait for our respond')}
-
-  //document.getElementbyid("hasil").innerHTML = cname;
+  else {
+   document.getElementById('hasil').innerHTML = "Name : " + cname + " | Email : " +    cemail + " | Project :" + cproject;
+   document.getElementById("form-contact").reset();
+  }
 }
 
 setInterval(() =>{
   plusSlides(slideIndex);
 }, 3000);
+
